@@ -1,3 +1,6 @@
+LAMBDA CALCULUS TURING MACHINE (TM) CONVERTER
+========================
+
 This is web application that hosts two interpreters: the lambda calculus interpreter and Turing machine interpreter, and allows the user to simulate between them.
 
 - Built in the **HTML/CSS/JavaScripts**
@@ -13,12 +16,12 @@ The multi-tape TM interpreter is used for simulating the lambda calculus term in
 LAMBDA CALCULUS INTERPRETER
 ========================
 
-<img src="/img/lambdaGif"/>
+![](img/lambdaGif.gif)
 
 TURING MACHINE (TM) INTERPRETER
 ========================
 
-<img src="/img/turingGif" width="250" height="250"/>
+![](img/turingGif.gif =250x250)
 
 INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 ================================
@@ -29,7 +32,7 @@ INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 
 3. In the `Lambda Calculus Interpreter`, enter to the right of 'T' the tape you want to run:
 
-    $ T101
+$ T101
 
 4. Run the `Lambda Calculus Interpreter`
 

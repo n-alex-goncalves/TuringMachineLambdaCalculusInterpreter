@@ -1,0 +1,42 @@
+{
+  "name": "lambdacalculusinterpreter",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "http://NunoAGoncalves.github.io/LambdaCalculusInterpreter.",
+  "main": "lambda_calculus.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NunoAGoncalves/LambdaCalculusInterpreter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NunoAGoncalves/LambdaCalculusInterpreter/issues"
+  },
+  "homepage": "https://github.com/NunoAGoncalves/LambdaCalculusInterpreter#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "jest": "^27.5.1",
+    "jquery": "^3.6.0",
+    "jquery.terminal": "^2.32.1",
+    "js-yaml": "^4.1.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>",
+      "<rootDir>/javascripts"
+    ],
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/javascripts"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  }
+}

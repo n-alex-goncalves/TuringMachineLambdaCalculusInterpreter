@@ -17,11 +17,11 @@ LAMBDA CALCULUS INTERPRETER
 ========================
 
 ![](img/lambdaGif.gif)
-
+ 
 TURING MACHINE (TM) INTERPRETER
 ========================
 
-![](img/turingGif.gif =250x250)
+<img src="img/turingGif.gif" width="750" height="450">
 
 INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 ================================
@@ -32,7 +32,7 @@ INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 
 3. In the `Lambda Calculus Interpreter`, enter to the right of 'T' the tape you want to run:
 
-$ T101
+        T101
 
 4. Run the `Lambda Calculus Interpreter`
 

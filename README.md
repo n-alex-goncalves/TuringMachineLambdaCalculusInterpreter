@@ -13,12 +13,12 @@ The multi-tape TM interpreter is used for simulating the lambda calculus term in
 LAMBDA CALCULUS INTERPRETER
 ========================
 
-![](https://github.com/NunoAGoncalves/Lambda-Calculus-Interpreter/blob/main/interpreterGif.gif)
+<img src="/img/lambdaGif"/>
 
 TURING MACHINE (TM) INTERPRETER
 ========================
 
-![](https://github.com/NunoAGoncalves/Lambda-Calculus-Interpreter/blob/main/interpreterGif.gif)
+<img src="/img/turingGif" width="250" height="250"/>
 
 INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 ================================

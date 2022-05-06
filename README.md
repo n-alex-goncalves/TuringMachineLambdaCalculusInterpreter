@@ -1,9 +1,9 @@
 TURING MACHINE (TM) LAMBDA CALCULUS CONVERTER
 ========================
 
-[This is web application that hosts two interpreters: the lambda calculus interpreter and Turing machine interpreter, and allows the user to simulate between them using the methods outlined by Dal Lago and Martini.](https://nunoagoncalves.github.io/Lambda-Calculus-Interpreter/)
+[This is a web application that hosts two interpreters: the lambda calculus interpreter and Turing machine interpreter. The web application allows the user to simulate between the two models using the methods outlined by Dal Lago and Martini.](https://nunoagoncalves.github.io/Turing-Machine-Lambda-Calculus-Converter/)
 
-The web application works in both directions outlined by Dal Lago and Martini. The application can simulate from the lambda calculus to the multi-tape Turing machine, as well as from the single-tape Turing machine to the weak lambda calculus.
+The web application can simulate between the two models in both directions. The application can either simulate from the lambda calculus to the multi-tape Turing machine or from the single-tape Turing machine to the weak lambda calculus.
 
 - Built in the **HTML/CSS/JavaScripts**
 - User Interface built with **Bootstrap**, **JQuery**, and **FullPages**
@@ -11,7 +11,7 @@ The web application works in both directions outlined by Dal Lago and Martini. T
 
 The lambda calculus interpreter uses an applicative-order evaluation strategy to perform beta reduction. The interpreter can reduce complicated lambda expressions, highlight the parameter and argument of a reduction, and simulate SKI combinators and boolean logic.
 
-The TM interpter works using a JSON-based terminal as outlined by Chad Palmer in his article 'A Complete Web Page: Building a Turing Machine in JavaScript'. The TM interperter can visualise the run of the TM by simulating the machine head on the tape.
+The TM interpter works using a JSON-based terminal as outlined by Chad Palmer in his article 'A Complete Web Page: Building a Turing Machine in JavaScript'. The TM interperter can visualise the run of the TM by simulating the movement of the machine head on the tape.
 
 The multi-tape TM interpreter is used for simulating the lambda calculus term in a Turing machine. 
 
@@ -73,6 +73,3 @@ Thanks go to the following authors/resources for their help
 [fullPage.js](https://alvarotrigo.com/fullPage/)  
 [Chad Palmer](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4)  
 [Tadeu Zagallo](https://tadeuzagallo.com/blog/writing-a-lambda-calculus-interpreter-in-javascript/)  
-
-
-

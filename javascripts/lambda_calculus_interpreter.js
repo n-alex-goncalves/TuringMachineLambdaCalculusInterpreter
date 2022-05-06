@@ -865,7 +865,6 @@ var FOO = (function() {
 
 const interpret = function interpret_function(command, bool=false) { return FOO.interpret(command, bool); }
 const stringify = function stringify(AST) { return stringify_tree(AST); }
-/**
 const convert_to_De_Brujin_function = function convert_to_De_Brujin_function(node) { return convert_to_De_Brujin(node); }					  
 const interpret_TM = function interpret_TM_function(command, bool=false) { return FOO.interpret_TM(command, bool); }
 const parse_tree =  function parse_tree(AST) { return FOO.parse_tree(AST); }
@@ -875,4 +874,3 @@ module.exports = {
 	convert_to_De_Brujin_function,
 	parse_tree
 }
-**/

@@ -206,7 +206,7 @@ function step_configuration_function(tape_alphabet, states, ruleset) {
 	return ['(' + term + ')', lst];
 }
 
-/**
+
 const AC_functionJ = function AC_sub(alphabet) { return AC(alphabet); }
 const AS_functionJ = function AS_sub(alphabet) { return AS(alphabet); }
 const AR_functionJ = function AR_sub(alphabet) { return AR(alphabet); }
@@ -233,4 +233,3 @@ module.exports = {
 	enumerate_functionJ,
 	reverse_functionJ
 }
-**/

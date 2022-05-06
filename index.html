@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Lambda Calculus–Turing Machine Converter</title>
+	<title>Turing Machine–Lambda Calculus Converter</title>
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -37,17 +37,22 @@
 			<!-- Lambda Calculus Description -->
 			<div class="col-md-4 quarter right" style="background-color:#B3B3B3;">
 				<div class="container p-3 overflow-hidden">
-					<h2>Lorem Ipsum</h2>
+					<h2>LAMBDA CALCULUS INTERPRETER</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						<b>Lambda Calculus</b>  (also written as <b>λ-calculus</b>) is a formal system in mathematical logic for expressing computation based on function abstraction and application. Introduced by Alonzo Church in the 1930s, it is a universal model of computation that can be used to simulate any Turing machine.
 					</p>
-					<h4>Lorem Ipsum Dolor</h4>
+					<h2>Examples</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+						Here are a few input examples for the interpreter:<br>
+						<code>(\x.x)(\y.y)(\z.z)</code><br>
+						<code>(\x.(\y.xy))y</code><br>
+						<code>(λvw.v)xy</code><br><br>
+						The link to the lambda calculus' Wikipedia article can be found <a href="https://en.wikipedia.org/wiki/Lambda_calculus" style="color: crimson;">here</a>.  
 					</p>
+				
 				</div>
 			</div>
-		
+			
 		</div>
 	</div>
 
@@ -100,15 +105,16 @@
 			</div>
 		
 			<!-- Turing Machine Description -->
-			<div class="col-md-6 quarter right" style="background-color:#B3B3B3; padding-right: 15px;">
+			<div class="col-md-6 quarter right" style="background-color:#B3B3B3; padding-right: 50px;">
 				<div class="container p-3 overflow-hidden">
-					<h2>Lorem Ipsum</h2>
+					<h2>TURING MACHINE INTERPRETER</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						<b>Turing machines</b> are a system that represent computation as states on an infinite tape. The model, like the lambda calculus, expresses the concept of computability. Introduced by Alan Turing just after Church's paper, the Turing machine is a high-level semi-physical model of computation.
 					</p>
-					<h4>Lorem Ipsum Dolor</h4>
+					<h4>EXAMPLES</h4>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+						Use the dropdown menu on the top-right of the machine to select a ruleset.<br><br>
+						The link to the Turing machine's Wikipedia article can be found <a href="https://en.wikipedia.org/wiki/Turing_machine" style="color: crimson;">here</a>.   
 					</p>
 				</div>
 			</div>
@@ -224,78 +230,23 @@
 			</div>
 		
 			<!-- MULTI-TAPE Turing Machine Description -->
-			<div class="col-md-6 quarter right-40" style="background-color:#B3B3B3; padding-right: 15px;">
+			<div class="col-md-6 quarter right-40" style="background-color:#B3B3B3; padding-right: 50px;">
 				<div class="container p-3 overflow-hidden">
-					<h2>Lorem Ipsum</h2>
+					<h2>MULTI-TAPE INTERPRETER</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						<b>Multi-tape Turing machines</b> are a variant of the original Turing machine. As the name suggests, a multi-tape Turing machine hosts multiple tapes and a machine head for each one.
 					</p>
-					<h4>Lorem Ipsum Dolor</h4>
+					<h4>DESCRIPTION</h4>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+						The interpreter here is necessary to simulate the methods by <a href="https://www.researchgate.net/publication/220152286_The_weak_lambda_calculus_as_a_reasonable_machines" style="color: crimson;">Dal Lago and Martini</a>. To simulate the correct lambda term, enter a term in the lambda calculus interpreter. The term entered will then be converted and updated into its appropriate form in the multi-tape interpreter. 
 					</p>
 				</div>
 			</div>
 		
 		</div>
 	</div>
-
-	<div class="section" style="background-color:#B3B3B3">
-		<div class="container">
-			<div class="row align-items-start mt-3">
-				<div class="col">
-					<h2>Lorem Ipsum Dolor</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-				</div>
-				<div class="col">
-					<h2>Lorem Ipsum Dolor</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-					<h4>Lorem Ipsum Dolor</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-				</div>
-				<div class="col">
-					<h2>Lorem Ipsum Dolor</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-					<h4>Lorem Ipsum Dolor</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	
 </div>
-
-
-{ "Q0": { 
-	"0": ["Q0", "0", "R"], 
-	"1": ["Q1", "1", "R"], 
-	"B": ["ACCEPT", "B", ""] }, 
- "Q1": { 
-	"0": ["Q2", "0", "R"], 
-	"1": ["Q0", "1", "R"],
-        "B": ["REJECT", "B", ""] }, 
- "Q2": { 
-	"0": ["Q1", "0", "R"], 
-	"1": ["Q2", "1", "R"],
-        "B": ["REJECT", "B", ""] 
-} }
-
 
 <!-- FullPage JS -->
 <script type="text/javascript" src="javascripts/fullpage.js"></script>
@@ -312,14 +263,7 @@
 <script src="javascripts/single_tape_TM_interpreter.js"></script>
 <script src="javascripts/multi_tape_TM_interpreter.js"></script>
 
-<script type="text/javascript">
-    window.onbeforeunload = function() {
-        return "Dude, are you sure you want to leave? Think of the kittens!";
-    }
-</script>
-
 <script>
-
 
 $('#dropdown-button').on('change', function() {
  	machine = $(this).val();
@@ -361,6 +305,7 @@ $('#dropdown-button').on('change', function() {
 });
 
 new fullpage('#fullpage', {
+	licenseKey: 'gplv3-license',
     navigation: true,
     responsiveWidth: 700,
     anchors: ['home', 'about-us', 'contact'],
@@ -380,7 +325,7 @@ var terminal = $('#terminal').terminal(function(command, term) {
 			this.echo('[[;teal;black]------------\n' + interpret(command) + ']');
 			break;
 		case 'help':
-			this.echo('[[;teal;black]INTRODUCTION:\nThis section is intentionally blank\n\nCOMMANDS:\nhelp\nclear\nclear-history\n\nLAMBDA CALCULUS EXAMPLES:\n(\\x\.x)\n(\\x\.x)y\n\n(\\x\.xx)y\n(\\x\.x)(\\y\.y)(\\z\.z)\n(\\x\.(\\y\.xy))z\n\nLAMBDA CALCULUS SYNTAX:\nterm  ------- variable | abstraction | application\nvariable  ------- IDENTIFIER\nIDENTIFIER  ------- a-zA-Z \nabstraction -------\n\nSTANDARD TERMS:\nI ------- (λx.x)\nS ------- (λx.λy.λz.xz(yz))\nK ------- (λx.λy.x)\nB ------- (λx.λy.λz.x(yz))\nC ------- (λx.λy.λz.xzy)\nW ------- (λx.λy.xyy)]');
+			this.echo('[[;teal;black]COMMANDS:\nhelp\nclear\nclear-history\n\nLAMBDA CALCULUS EXAMPLES:\n(\\x\.x)\n(\\x\.x)y\n\n(\\x\.xx)y\n(\\x\.x)(\\y\.y)(\\z\.z)\n(\\x\.(\\y\.xy))z\n\nLAMBDA CALCULUS SYNTAX:\nterm  ------- variable | abstraction | application\nvariable  ------- IDENTIFIER\nIDENTIFIER  ------- a-zA-Z \nabstraction -------\n\nSTANDARD TERMS:\nI ------- (λx.x)\nS ------- (λx.λy.λz.xz(yz))\nK ------- (λx.λy.x)\nB ------- (λx.λy.λz.x(yz))\nC ------- (λx.λy.λz.xzy)\nW ------- (λx.λy.xyy)]');
 			break;	
 	}
 	},{
@@ -399,91 +344,3 @@ terminal_print = function(str, bool=true) {
 
 </body>
 </html>
-
-<!--
-
-MENTION THAT YAML WOULD'VE BEEN FAR BETTER
- 
- START_STATE = RIGHT 0
- 
- { "RIGHT": { \n	"0": ["RIGHT", "0", "R"], \n	"1": ["RIGHT", "1", "R"], \n	"+": ["RIGHT", "+", "R"], \n	"B": ["READ", "B", "L"] }, \n "READ": { \n 	"0": ["HAVE0", "c", "L"],  \n	"1": ["HAVE1", "c", "L"],  \n	"+": ["REWRITE", "B", "L"] }, \n "HAVE0": {  \n	"0": ["HAVE0", "0", "L"],  \n	"1": ["HAVE0", "1", "L"],  \n	"+": ["ADD0",  "+", "L"] }, \n "HAVE1": {  \n	"0": ["HAVE1", "0", "L"],  \n	"1": ["HAVE1", "1", "L"],  \n	"+": ["ADD1", "+", "L"] },  \n "ADD0": {  \n	"0": ["BACK0", "0", "R"], \n	"B": ["BACK0", "0", "R"],  \n	"1": ["BACK0", "I", "R"], \n	"O": ["ADD0", "O", "L"], \n	"I": ["ADD0", "O", "O"] }, \n "ADD1": { \n	"0": ["BACK1", "I", "R"], \n	"B": ["BACK1", "I", "R"], \n	"1": ["CARRY", "O", "L"], \n	"O": ["ADD1", "O", "L"], \n	"I": ["ADD1", "I", "L"] }, \n "CARRY": { \n	"0": ["BACK1", "I", "R"], \n	"B": ["BACK1", "I", "R"], \n	"1": ["CARRY", "0", "L"] }, \n "BACK0": { \n	"0": ["BACK0", "0", "R"], \n	"1": ["BACK0", "1", "R"], \n	"O": ["BACK0", "O", "R"], \n	"I": ["BACK0", "I", "R"], \n	"+": ["BACK0", "+", "R"], \n	"c": ["READ", "0", "L"]	}, \n "BACK1": { \n	"0": ["BACK1", "0", "R"], \n	"1": ["BACK1", "1", "R"], \n	"O": ["BACK1", "O", "R"], \n	"I": ["BACK1", "I", "R"], \n	"+": ["BACK1", "+", "R"], \n	"c": ["READ", "1", "L"]	}, \n "REWRITE": { \n	"O": ["REWRITE", "0", "L"], \n	"I": ["REWRITE", "1", "L"], \n	"0": ["REWRITE", "0", "L"], \n	"1": ["REWRITE", "1", "L"], \n	"B": ["DONE", "B", "R"] \n } }
- 
-   b:
-    ' ': {write: 0, R: c}
-  c:
-    ' ':           {R: e}
-  e:
-    ' ': {write: 1, R: f}
-  f:
-    ' ':           {R: b}
- 
- 
- 
- 
-{ "B": { \n	"B": ["C", "0", "R"] }, \n "C": { \n	"B": ["E", "B", "R"] }, \n "E": { \n	"0": ["F", "1", "R"] }, \n "F": { \n	"B": ["B", "B", "R"] \n } }
-
- 
- 
- 
- 
- 
-{ "RIGHT": {
-	"0": ["RIGHT", "0", "R"],
-	"1": ["RIGHT", "1", "R"],
-	"+": ["RIGHT", "+", "R"],
-	"B": ["READ", "B", "L"] },
- "READ": {
-	"0": ["HAVE0", "c", "L"], 
-	"1": ["HAVE1", "c", "L"], 
-	"+": ["REWRITE", "B", "L"] }, 	
-  "HAVE0": { 
-	"0": ["HAVE0", "0", "L"], 
-	"1": ["HAVE0", "1", "L"], 
-	"+": ["ADD0",  "+", "L"] }, 
- "HAVE1": { 
-	"0": ["HAVE1", "0", "L"], 
-	"1": ["HAVE1", "1", "L"], 
-	"+": ["ADD1", "+", "L"] }, 
- "ADD0": { 
-	"0": ["BACK0", "0", "R"],
-	"B": ["BACK0", "0", "R"], 
-	"1": ["BACK0", "I", "R"],
-	"O": ["ADD0", "O", "L"],
-	"I": ["ADD0", "O", "O"] },
- "ADD1": {
-	"0": ["BACK1", "I", "R"],
-	"B": ["BACK1", "I", "R"],
-	"1": ["CARRY", "O", "L"],
-	"O": ["ADD1", "O", "L"],
-	"I": ["ADD1", "I", "L"] },
- "CARRY": {
-	"0": ["BACK1", "I", "R"],
-	"B": ["BACK1", "I", "R"],
-	"1": ["CARRY", "0", "L"] },
- "BACK0": {
-	"0": ["BACK0", "0", "R"],
-	"1": ["BACK0", "1", "R"],
-	"O": ["BACK0", "O", "R"],
-	"I": ["BACK0", "I", "R"],
-	"+": ["BACK0", "+", "R"],
-	"c": ["READ", "0", "L"]	},
- "BACK1": {
-	"0": ["BACK1", "0", "R"],
-	"1": ["BACK1", "1", "R"],
-	"O": ["BACK1", "O", "R"],
-	"I": ["BACK1", "I", "R"],
-	"+": ["BACK1", "+", "R"],
-	"c": ["READ", "1", "L"]	},
- "REWRITE": {
-	"O": ["REWRITE", "0", "L"],
-	"I": ["REWRITE", "1", "L"],
-	"0": ["REWRITE", "0", "L"],
-	"1": ["REWRITE", "1", "L"],
-	"B": ["DONE", "B", "R"]
-} }
-
-{ "ZERO": { \n	"0": ["ONE", "B", "R"], \n	"B": ["REJECT", "B", "_"] }, \n "ONE": { \n	"0": ["EVEN", "x", "R"],  \n	"B": ["ACCEPT", "B", "_"],  \n	"x": ["ONE", "B", "R"] }, \n "EVEN": { \n	"0": ["ODD", "0", "R"],  \n	"B": ["BACK", "B", "L"], \n	"x": ["EVEN",  "x", "R"] },  \n "ODD": {  \n	"0": ["EVEN", "x", "R"],  \n	"B": ["REJECT", "B", "_"],  \n	"x": ["ODD", "x", "R"] },  \n "BACK": {  \n	"B": ["ONE", "B", "R"], \n	"0": ["BACK", "0", "L"],  \n	"x": ["BACK", "x", "L"] \n } }
-
-
-
--->

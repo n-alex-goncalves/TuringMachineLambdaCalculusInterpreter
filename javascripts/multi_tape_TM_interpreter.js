@@ -1,3 +1,5 @@
+// Code for creating the multi-tape Turing machine interpreter simulating the lambda calculus
+// Author: Nuno Goncalves (NunoAGoncalves)
 
 let str_ruleset = `{
 	"S0A": {
@@ -442,7 +444,7 @@ class M_MACHINE {
         while (this.stepLookup()) {
             M_PRINTER.print_status(this.status, true);
             this.step();
-			await delay(10);
+			await delay(100);
         }
 		
 		M_PRINTER.print_status(this.status, true);

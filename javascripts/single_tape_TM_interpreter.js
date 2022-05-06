@@ -1,6 +1,9 @@
+// Code for creating a single-tape Turing machine interpreter
+// Author: Nuno Goncalves (NunoAGoncalves)
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
+// the machine head of the Turing machine
 class Head {
     constructor(string) {
         let parsed = Head.parse(string);
@@ -25,6 +28,7 @@ class Head {
     }
 }
 
+// the Turing machine's tape
 class Tape {
     constructor(string) {
         this.tape = Tape.parse(string);
@@ -34,11 +38,11 @@ class Tape {
         return this.tape.join(' | ');
     }
 
-    extendLeft() {
+    extend_left() {
         this.tape.unshift("B");
     }
 
-    extendRight() {
+    extend_right() {
         this.tape.push("B");
     }
 
@@ -51,6 +55,7 @@ class Tape {
     }
 }
 
+// the literal machine controlling the rulesets.
 class Machine {
     constructor(ruleset, tape, head) {
         this.ruleset = ruleset;
@@ -64,11 +69,11 @@ class Machine {
 		return ['CURRENT STATE: ' + head_state, this.tape.status + '<br>' + '&#8200;'.repeat(parseInt(head_location) * 6) + '^']
     }
 
-    shiftHead(move) {
+    shift_head(move) {
         if (this.head.location == 0 && move == "L") {
-            this.tape.extendLeft();
+            this.tape.extend_left();
         } else if (this.head.location == this.tape.tape.length - 1 && move == "R") {
-            this.tape.extendRight();
+            this.tape.extend_right();
             this.head.location += 1;
         } else if (move == "L") {
             this.head.location -= 1;
@@ -77,7 +82,7 @@ class Machine {
         }
     }
 
-    stepLookup() {
+    step_lookup() {
         if (this.ruleset[this.head.state] && this.ruleset[this.head.state][this.tape.tape[this.head.location]]) {
             let output = this.ruleset[this.head.state][this.tape.tape[this.head.location]];
             if (output[0] == this.head.state && output[1] == this.tape.tape[this.head.location] && !(output[2] == 'L' || output[2] == 'R')) {
@@ -90,28 +95,27 @@ class Machine {
     }
 
     step() {
-        let new_state = this.stepLookup()[0]
-        let new_symbol = this.stepLookup()[1]
-        let move = this.stepLookup()[2]
-
+        let new_state = this.step_lookup()[0]
+        let new_symbol = this.step_lookup()[1]
+        let move = this.step_lookup()[2]
         this.tape.write(new_symbol, this.head.location)
         this.head.state = new_state
-        this.shiftHead(move)
+        this.shift_head(move)
     }
 
     async run() {
         this.running = true;
-        while (this.stepLookup()) {
+        while (this.step_lookup()) {
             Printer.print_status(this.status, true);
             this.step();
 			await delay(1500);
         }
-
         Printer.print_status(this.status, true);
         Printer.print('FINAL STATE: ' + this.head.state + ' | HALT');
     }
 }
 
+// prints the Turing machine processing the tape
 class Printer {
     static print(string, flag=false) {
 		if (flag) this.clear()
@@ -134,21 +138,27 @@ class Printer {
     }
 }
 
+// on click of the Turing machine interpreter button
 $('#tape_button').click(function() {
 	Printer.clear();
 	
+    // prepares the Turing machine by assigning the ruleset, tape and head
 	let ruleset = JSON.parse($("form")[0]['ruleset'].value);
 	let tape = new Tape($("form")[0]['tape'].value);
 	let head = new Head($("form")[0]['head'].value);
 	
+    // creates an input_alphabet, tape_alphabet and states set for translating the Turing machine in the lambda calculus
 	let input_alphabet = new Set();
 	let tape_alphabet = new Set();
 	let states = new Set();
-	
+
+    // adds the blank symbol to the tape_alphabet pre-emptively (it should not be in the input alphabet)
 	tape_alphabet.add('B');
+
+    // adds the initial head setting state to the set of states
 	states.add(head.state);
 	
-	// Updates state and tape_alphabet list by iterating through the ruleset
+	// updates state and tape_alphabet by iterating through the ruleset
 	for (let state in ruleset) {
 		states.add(state);
 		for (let symbol in ruleset[state]) {
@@ -157,74 +167,22 @@ $('#tape_button').click(function() {
 		}
 	}
 	
-	// Updates tape_alphabet list by iterating through the tape
+	// updates tape_alphabet and input_alphaebet by iterating through the tape
 	for (let character of tape['tape']) {
 		input_alphabet.add(character);
 		tape_alphabet.add(character);
 	}
 	
+    // spreads the set out into an array
 	tape_alphabet = [...tape_alphabet];
 	states = [...states];
 	
+    // necessary to simulate Turing machines in the lambda calculus
 	GLOBAL_TURING_MACHINE_TO_LAMBDA_CALCULUS = [head.state, states, tape_alphabet, ruleset];
 
+    // runs the Turing machine in the Turing machine interpreter
 	m = new Machine(ruleset, tape, head);
 	m.run()
 
 	event.preventDefault();
 })
-
-/**
-function initialize() {
-    form = document.querySelectorAll("form")[0];
-    form.addEventListener("submit", function(event) {
-        
-		Printer.clear();
-
-        let ruleset = JSON.parse(form.elements['ruleset'].value)
-        let tape = new Tape(form.elements['tape'].value)
-        let head = new Head(form.elements['head'].value)
-		
-		let input_alphabet = new Set();
-		let tape_alphabet = new Set();
-		let states = new Set();
-		
-		tape_alphabet.add('B');
-		states.add(head.state);
-		
-		// updates state and tape_alphabet list by iterating through the ruleset
-		for (let state in ruleset) {
-			states.add(state);
-			for (let symbol in ruleset[state]) {
-				states.add(ruleset[state][symbol][0]);
-				tape_alphabet.add(ruleset[state][symbol][1]);
-			}
-		}
-		
-		// Updates tape_alphabet list by iterating through the tape
-		for (let character of tape['tape']) {
-			input_alphabet.add(character);
-			tape_alphabet.add(character);
-		}
-		
-		input_alphabet = [...input_alphabet];
-		tape_alphabet = [...tape_alphabet];
-		states = [...states];
-		
-		let I_M = initial_configuration_function(head.state, states, tape_alphabet, input_alphabet);
-		let F_M = final_configuration_function(tape_alphabet, input_alphabet);
-		let [ T_M, lst ] = step_configuration_function(tape_alphabet, states, ruleset);
-
-		GLOBAL_TURING_MACHINE_TO_LAMBDA_CALCULUS = [I_M, T_M, F_M, lst, '(' + 'λx.' + F_M + '(' + T_M + '(' + I_M + 'x))' + ')'];
-		INPUT_ALPHABET = input_alphabet;
-
-        m = new Machine(ruleset, tape, head);
-        m.run()
-
-        event.preventDefault();
-    })
-}
-
-initialize();
-
-**/

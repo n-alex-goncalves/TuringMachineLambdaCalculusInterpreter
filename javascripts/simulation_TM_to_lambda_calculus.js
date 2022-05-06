@@ -1,12 +1,9 @@
+// Code for simulating Turing machines in the weak lambda calculus.
+// Author: Nuno Goncalves (NunoAGoncalves)
+
 var GLOBAL_TURING_MACHINE_TO_LAMBDA_CALCULUS;
 var INPUT_ALPHABET;
 
-/**
- * 
- * @param {*} list 
- * @param {*} index 
- * @returns 
- */
 function enumerate_function(list, index) {	
 	if (index < 0) {
 		throw 'ENUMERATE FUNCTION ERROR: Item not in list [' + list + '] !'; 
@@ -19,12 +16,6 @@ function enumerate_function(list, index) {
 	return '(' + term + '[x_' + (index + 1) + ']' + ')';
 }
 
-/**
- * 
- * @param {*} string 
- * @param {*} alphabet 
- * @returns 
- */
 function finite_string_function(string, alphabet) {
 	
 	let prefix = ''
@@ -57,14 +48,8 @@ function finite_string_function(string, alphabet) {
 	
 }
 
-/**
- * 
- * @param {*} string 
- * @param {*} alphabet 
- * @returns 
- */
 function reverse_finite_string_function(string, alphabet) {
-	let res = string.match(/(?<=\.)\[(.*?)\]/g); // regular expression that matches [...]
+	let res = string.match(/(?<=\.)\[(.*?)\]/g);
 	let output = '';
 	if (res == null) {
 		return output; 
@@ -79,11 +64,6 @@ function reverse_finite_string_function(string, alphabet) {
 	return output;
 }
 
-/**
- * 
- * @param {*} alphabet 
- * @returns 
- */
 function AC(alphabet) {
 	let term = 'λa.λu.a'
 	let prefix = ''
@@ -98,8 +78,6 @@ function AC(alphabet) {
 	return '(' + term + 'u' + ')'
 }
 
-// [CORRECT]
-// ADD STRING
 function AS(alphabet) {
 	let term = 'H(λx.λu.λv.u'
 	let prefix = '';
@@ -115,8 +93,6 @@ function AS(alphabet) {
 	return '(' + term + ')';
 }
 
-// [CORRECT]
-// ADD REVERSE
 function AR(alphabet) {
 	let term = 'H(λx.λu.λv.u';
 	let prefix = '';
@@ -125,15 +101,13 @@ function AR(alphabet) {
 	}	
 	let P;
 	for (let i = 1; i < alphabet.length + 1; i++) {
-		P = 'λu.λv.xu(' + prefix + 'λh.[x_' + i + ']v)'; // <---------------
+		P = 'λu.λv.xu(' + prefix + 'λh.[x_' + i + ']v)'; 
 		term = term + '(' + P + ')';
 	}
 	term = term + '(λw.w)v' + ')';
 	return '(' + term + ')';
 }
 
-// [CORRECT]
-// CONVERT CHARACTER
 function CC(initial_alphabet, new_alphabet) {
 	let term = 'λa.a';
 	let M;
@@ -172,7 +146,6 @@ function configuration_term(left_string, head, right_string, cur_state, states, 
 	return '(' + 'λx.x' + finite_string_function(left_string.split('').reverse().join(''), tape_alphabet) + enumerate_function(tape_alphabet, tape_alphabet.indexOf(head)) + finite_string_function(right_string, tape_alphabet) + enumerate_function(states, states.indexOf(cur_state)) + ')'
 }
 
-// intiial configuration I(M,Δ)
 function initial_configuration_function(initial_state, states, tape_alphabet, input_alphabet) {
 	let term = 'H(λx.λu.u'
 	let M; 
@@ -185,13 +158,10 @@ function initial_configuration_function(initial_state, states, tape_alphabet, in
 	return '(' + term + N + '))';
 }
 
-// [CORRECT]
-// FINAL CONFIGURATION FUNCTION
 function final_configuration_function(tape_alphabet, input_alphabet) {
 	return '(' + 'λx.x(λu.λa.λv.λq.' + AR(input_alphabet) + '(' + CS(tape_alphabet, input_alphabet) + 'u' + ')' + '(' + AS(input_alphabet) + '(' + CC(tape_alphabet, input_alphabet) + 'a' + ')' + '(' + CS(tape_alphabet, input_alphabet) + 'v' + '))))';
 }
-	
-// step configuration T(M)		
+		
 function step_configuration_function(tape_alphabet, states, ruleset) {
 	let term = 'H(λx.λy.y(λu.λa.λv.λq.q' 
 	
@@ -236,32 +206,19 @@ function step_configuration_function(tape_alphabet, states, ruleset) {
 	return ['(' + term + ')', lst];
 }
 
-// --------------------------------------------------
-
+/**
 const AC_functionJ = function AC_sub(alphabet) { return AC(alphabet); }
-
 const AS_functionJ = function AS_sub(alphabet) { return AS(alphabet); }
-
 const AR_functionJ = function AR_sub(alphabet) { return AR(alphabet); }
-
 const CC_functionJ = function CC_sub(alphabet1, alphabet2) { return CC(alphabet1, alphabet2); }
-
 const CS_functionJ = function CS_sub(alphabet1, alphabet2) { return CS(alphabet1, alphabet2); }
-
 const initial_functionJ = function intial_sub(initial_state, states, tape_alphabet, input_alphabet) { return initial_configuration_function(initial_state, states, tape_alphabet, input_alphabet); }
-
 const final_functionJ = function final_sub(tape_alphabet, input_alphabet) { return  final_configuration_function(tape_alphabet, input_alphabet); }
-
 const step_functionJ = function step_sub(tape_alphabet, states, ruleset) { return step_configuration_function(tape_alphabet, states, ruleset); }
-
 const configuration_functionJ = function configu_sub(input_string, head, tail, initial_state, states, tape_alphabet) { return configuration_term(input_string, head, tail, initial_state, states, tape_alphabet); }	
-
 const finite_string_functionJ = function finite_sub(string, alphabet) { return finite_string_function(string, alphabet); }	
-								
 const enumerate_functionJ = function enumerate_sub(list, index) { return enumerate_function(list, index); }
-
 const reverse_functionJ = function reverse_sub(string, alphabet) { return reverse_finite_string_function(string, alphabet) }
-
 module.exports = {
 	AC_functionJ,
 	AS_functionJ,
@@ -276,16 +233,4 @@ module.exports = {
 	enumerate_functionJ,
 	reverse_functionJ
 }
-
-/**
-
-
-
-
-
-
-
-
-
-
 **/

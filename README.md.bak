@@ -1,4 +1,7 @@
-This is web application that hosts two interpreters: the lambda calculus interpreter and Turing machine interpreter, and allows the user to simulate between them.
+TURING MACHINE (TM) LAMBDA CALCULUS CONVERTER
+========================
+
+[This is web application that hosts two interpreters: the lambda calculus interpreter and Turing machine interpreter, and allows the user to simulate between them using the methods outlined by Dal Lago and Martini.](https://nunoagoncalves.github.io/Lambda-Calculus-Interpreter/)
 
 - Built in the **HTML/CSS/JavaScripts**
 - User Interface built with **Bootstrap**, **JQuery**, and **FullPages**
@@ -13,12 +16,16 @@ The multi-tape TM interpreter is used for simulating the lambda calculus term in
 LAMBDA CALCULUS INTERPRETER
 ========================
 
-![](https://github.com/NunoAGoncalves/Lambda-Calculus-Interpreter/blob/main/interpreterGif.gif)
-
+![](img/lambdaGif.gif)
+ 
 TURING MACHINE (TM) INTERPRETER
 ========================
 
-![](https://github.com/NunoAGoncalves/Lambda-Calculus-Interpreter/blob/main/interpreterGif.gif)
+<img src="img/turingGif.gif" width="750" height="450">
+
+MULTI-TAPE TURING MACHINE (TM) INTERPRETER
+========================
+
 
 
 INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
@@ -30,7 +37,7 @@ INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 
 3. In the `Lambda Calculus Interpreter`, enter to the right of 'T' the tape you want to run:
 
-    $ T101
+        T101
 
 4. Run the `Lambda Calculus Interpreter`
 
@@ -53,14 +60,17 @@ FILES
 - `multi_tape_TM_interpreter.js`: The multi-tape interpreter for simulating the lambda calculus in the multi-tape TM interpreter
 - `simulation_TM_to_lambda_calculus.js`: The functions necessary to convert the single-tape TM into a lambda calculus term 
 
-DEPENDICES & REFERENCES
+DEPENDENCIES & REFERENCES
 ===================
 
-Thanks go to the following authors
+Thanks go to the following authors/resources for either their libraries or their ariticles, which guided the work done
 
 [jQuery](https://jquery.com/)  
 [jQuery Terminal](https://terminal.jcubic.pl/)  
-[BootStrap](https://getbootstrap.com/)
-[fullPage.js](https://alvarotrigo.com/fullPage/)
-[Chad Palmer](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4)
+[BootStrap](https://getbootstrap.com/)  
+[fullPage.js](https://alvarotrigo.com/fullPage/)  
+[Chad Palmer](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4)  
+[Tadeu Zagallo](https://tadeuzagallo.com/blog/writing-a-lambda-calculus-interpreter-in-javascript/)  
+
+
 

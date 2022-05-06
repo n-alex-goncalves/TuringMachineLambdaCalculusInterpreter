@@ -1,3 +1,6 @@
+// Code for creating a lambda calculus interpreter
+// Author: Nuno Goncalves (NunoAGoncalves)
+
 const IDENTIFIER = 101;
 const ABSTRACTION = 102;
 const APPLICATION = 103;
@@ -18,28 +21,14 @@ class Node { constructor(type, left, right) {
 
 function terminal_print() {}
 
-/**
- * Returns a deep copy of an object (i.e., clones all child objects) for substitution
- * 
- * @param {*} object – the object to be cloned
- * @returns – a deep clone of the object given
- */
  function clone(object) {
 	return structuredClone(object);
 	// return JSON.parse(JSON.stringify(object));
 }
 
-/**
- * Converts a Node tree into a string format
- * 
- * @param {Node} node – the head node of a tree
- * @returns – the string form of a node and its children
- */
 function stringify_tree(node) {
 	
-	if (!node) {
-		return null;
-	}
+	if (!node) { return null; }
 		
 	let stack = [[node.type, node]];
 	let str_list = [];
@@ -645,28 +634,23 @@ var FOO = (function() {
 			let parameter = null;
 			if (next(IDENTIFIER)) {
 				parameter = new Node(IDENTIFIER, token_list.shift().value, null);
-			} 
-			else if (skip('['.charCodeAt(0))) {
+			} else if (skip('['.charCodeAt(0))) {
 				let internal_name = '';
 				while (!skip(']'.charCodeAt(0))) {
 					internal_name = internal_name + token_list.shift().value;
 				}
 				parameter = new Node(IDENTIFIER, '[' + internal_name + ']', null);
-				// parameter = new Node(IDENTIFIER, '[' + internal_name + ']', null);
-			} 
-			else {
-				throw 'Something went badly wrong! (PARAMETER NOT IDENTIFIER 326)';
+			} else {
+				throw 'The parameter in lambda abstraction is not correct (PARAMETER NOT IDENTIFIER 326)';
 			}
 			
 			if (!skip('.'.charCodeAt(0))) {
 				if (next(IDENTIFIER)) {
 					token_list.unshift(new Token('\\'.charCodeAt(0), '\\'));	
-				} 
-				else {
-					throw 'Something went badly wrong! (ARGUMENT ERROR 334)';
+				} else {
+					throw 'The argument in the lambda abstraction is not correct (ARGUMENT ERROR 334)';
 				}
 			}
-			
 			let expr = expression();
 			return new Node(ABSTRACTION, parameter, expr);
 		}
@@ -678,13 +662,13 @@ var FOO = (function() {
 	 * @returns 
 	 */
 	function application() {
-		let lhs = atom();
+		let left_child = atom();
 		while (true) {
-			let rhs = atom();
-			if (rhs == null || rhs == undefined) {
-				return lhs;
+			let right_child = atom();
+			if (left_child == null || right_child == undefined) {
+				return left_child;
 			}
-			lhs = new Node(APPLICATION, lhs, rhs); 
+			left_child = new Node(APPLICATION, left_child, right_child); 
 		}
 	}
 	
@@ -700,18 +684,15 @@ var FOO = (function() {
 				return expression();
 			}
 			return expr;
-		}
-		else if (skip('['.charCodeAt(0))) {
+		} else if (skip('['.charCodeAt(0))) {
 			let internal_name = '';
 			while (!skip(']'.charCodeAt(0))) {
 				internal_name = internal_name + token_list.shift().value;
 			}
 			return new Node(IDENTIFIER, '[' + internal_name + ']', null);;
-		}
-		else if (next('\\'.charCodeAt(0))) {
+		} else if (next('\\'.charCodeAt(0))) {
 			return expression();
-		}
-		else if (next(IDENTIFIER)) {
+		} else if (next(IDENTIFIER)) {
 			return new Node(IDENTIFIER, token_list.shift().value, null);
 		}
 		return null;
@@ -882,24 +863,16 @@ var FOO = (function() {
 	}
 })();
 
-const convert_to_De_Brujin_function = function convert_to_De_Brujin_function(node) { return convert_to_De_Brujin(node); }
-						  
 const interpret = function interpret_function(command, bool=false) { return FOO.interpret(command, bool); }
-
-const interpret_TM = function interpret_TM_function(command, bool=false) { return FOO.interpret_TM(command, bool); }
-
 const stringify = function stringify(AST) { return stringify_tree(AST); }
-
+/**
+const convert_to_De_Brujin_function = function convert_to_De_Brujin_function(node) { return convert_to_De_Brujin(node); }					  
+const interpret_TM = function interpret_TM_function(command, bool=false) { return FOO.interpret_TM(command, bool); }
 const parse_tree =  function parse_tree(AST) { return FOO.parse_tree(AST); }
-					
 module.exports = {
 	stringify,
 	interpret,
 	convert_to_De_Brujin_function,
 	parse_tree
 }
-
-/**
-
-
 **/

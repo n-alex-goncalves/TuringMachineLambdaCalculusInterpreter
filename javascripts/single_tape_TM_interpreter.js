@@ -108,7 +108,7 @@ class Machine {
         while (this.step_lookup()) {
             Printer.print_status(this.status, true);
             this.step();
-			await delay(1500);
+			await delay(1000);
         }
         Printer.print_status(this.status, true);
         Printer.print('FINAL STATE: ' + this.head.state + ' | HALT');

@@ -12,7 +12,7 @@ The lambda calculus interpreter uses an applicative-order evaluation strategy to
 
 The TM interpter works using a JSON-based terminal as outlined by Chad Palmer in his article 'A Complete Web Page: Building a Turing Machine in JavaScript'. The TM interperter can visualise the run of the TM by simulating the movement of the machine head on the tape.
 
-The multi-tape TM interpreter is used for simulating the lambda calculus term in a Turing machine. 
+The multi-tape TM interpreter is used for simulating the lambda calculus term in a Turing machine. The lambda term reduced by the multi-tape interpreter is similar in format to the De Brujin indices.  
 
 ## INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
 

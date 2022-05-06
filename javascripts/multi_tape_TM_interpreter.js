@@ -171,11 +171,11 @@ class M_TAPE {
 		this.tape = M_TAPE.parse('B B B B');
 	}
 	
-    extendLeft() {
+    extend_left() {
         this.tape.unshift("B");
     }
 
-    extendRight() {
+    extend_right() {
         this.tape.push("B");
     }
 
@@ -213,9 +213,9 @@ class M_MACHINE {
 
     shiftHead(move, i) {
         if (this.head[i].location == 0 && move == "L") {
-            this.tape[i].extendLeft();
+            this.tape[i].extend_left();
         } else if (this.head[i].location == this.tape[i].tape.length - 1 && move == "R") {
-            this.tape[i].extendRight();
+            this.tape[i].extend_right();
             this.head[i].location += 1;
         } else if (move == "L") {
             this.head[i].location -= 1;

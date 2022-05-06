@@ -59,7 +59,7 @@ The multi-tape TM interpreter is used for simulating the lambda calculus term in
 
 ## DEPENDENCIES & REFERENCES
 
-Thanks go to the following authors/resources for their help and guidance
+Thanks go to the following authors/resources for their help
 
 [jQuery](https://jquery.com/)  
 [jQuery Terminal](https://terminal.jcubic.pl/)  

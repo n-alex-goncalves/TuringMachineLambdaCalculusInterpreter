@@ -1,12 +1,13 @@
-## TURING MACHINE (TM) LAMBDA CALCULUS CONVERTER
 
-[This is a web application that hosts an interpreter for and simulates between the lambda calculus and Turing machine.](https://nunoagoncalves.github.io/Turing-Machine-Lambda-Calculus-Converter/)
+<img src="img/Turing_Machine_(TM)_Lambda_Calculus_Converter.png">
 
-The web application can either simulate from the lambda calculus to the multi-tape Turing machine or from the single-tape Turing machine to the weak lambda calculus, using the methods outlined by [Dal Lago and Martini](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044)
+This is a web application that hosts an interpreter for and simulates between the lambda calculus and Turing machine. The web application can either simulate from the lambda calculus to the multi-tape Turing machine or from the single-tape Turing machine to the weak lambda calculus, using the methods outlined by [Dal Lago and Martini](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044)
 
 - Built in **HTML/CSS/JavaScript**
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**
 - Tested using **Jest** and **Node.JS**
+
+Website: https://nunoagoncalves.github.io/Turing-Machine-Lambda-Calculus-Converter/
 
 ## GENERAL DESCRIPTION
 

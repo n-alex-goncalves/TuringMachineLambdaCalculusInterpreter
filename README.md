@@ -1,7 +1,7 @@
 
 ![](img/logo.PNG)
 
-This is a web application that hosts an interpreter for and simulates between the lambda calculus and Turing machine. The web application can either simulate from the lambda calculus to the multi-tape Turing machine or from the single-tape Turing machine to the weak lambda calculus, using the methods outlined by [Dal Lago and Martini](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044)
+This is a web application that hosts an interpreter for and simulates between the lambda calculus and Turing machine. The web application can either simulate from the lambda calculus to the multi-tape Turing machine or from the single-tape Turing machine to the weak lambda calculus, using the methods outlined by Dal Lago and Martini in their paper [The weak lambda calculus as a reasonable machine](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044).
 
 - Built in **HTML/CSS/JavaScript**
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**

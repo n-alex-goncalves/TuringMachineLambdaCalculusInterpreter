@@ -46,10 +46,6 @@ The multi-tape TM interpreter is used for simulating the lambda calculus term in
 
 <img src="img/turingGif.gif" width="740" height="450">
 
-### MULTI-TAPE TURING MACHINE (TM) INTERPRETER
-
-<img src="img/multitapeGif.gif" width="950" height="465">
-
 ## FILES
 
 - `lambda_calculus_interpreter.js`: The lambda calculus system and the interpreter for running and reducing the lambda calculus terms

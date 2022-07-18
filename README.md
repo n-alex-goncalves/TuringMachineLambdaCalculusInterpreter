@@ -8,6 +8,8 @@ The web application can either simulate from the lambda calculus to the multi-ta
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**
 - Tested using **Jest** and **Node.JS**
 
+## GENERAL DESCRIPTION
+
 The lambda calculus interpreter uses an applicative-order evaluation strategy to perform beta reduction. The interpreter can reduce complicated lambda expressions, highlight the parameter and argument of a reduction, and simulate SKI combinators and boolean logic.
 
 The TM interpter works using a JSON-based terminal as outlined by Chad Palmer in his article 'A Complete Web Page: Building a Turing Machine in JavaScript'. The TM interperter can visualise the run of the TM by simulating the movement of the machine head on the tape.

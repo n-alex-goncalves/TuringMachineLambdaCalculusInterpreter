@@ -88,9 +88,6 @@ ul + p {
 }
 
 @media screen and (max-width: 800px) { 
-	.left {
-		width: 100%;
-	}
    .right {
        display: none;
 	   width: 0%;

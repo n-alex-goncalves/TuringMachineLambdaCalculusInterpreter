@@ -89,7 +89,7 @@
 								</div>
 								<div class="col-6">
 									<button type="submit" class="btn btn-dark rounded-0" id="tape_button" style="width: auto;">RUN</button>
-									<select class="form-select btn-dark mb-3 rounded-0" aria-label=".form-select-lg example" id="dropdown-button" style="width: 180px;">
+									<select class="form-select btn-dark mb-3 rounded-0" aria-label=".form-select-lg example" id="dropdown-button" style="width: 200px;">
 										<option> </option>
 										<option value = "binary increment">binary increment</option>
 										<option value = "divisible by 3">divisible by 3</option>

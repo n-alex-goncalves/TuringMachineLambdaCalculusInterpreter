@@ -1,4 +1,4 @@
-<a href = "https://nunoagoncalves.github.io/Turing-Machine-Lambda-Calculus-Converter/">
+<a href = "https://n-goncalves1.github.io/Turing-Machine-Lambda-Calculus-Converter/">
 <img src="img/logo.PNG">
 </a>
 
@@ -8,7 +8,7 @@ This is a web application that hosts an interpreter for and simulates between th
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**
 - Tested using **Jest** and **Node.JS**
 
-Website: https://nunoagoncalves.github.io/Turing-Machine-Lambda-Calculus-Converter/
+Website: https://n-goncalves1.github.io/Turing-Machine-Lambda-Calculus-Converter/
 
 ## GENERAL DESCRIPTION
 

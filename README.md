@@ -2,7 +2,9 @@
 <img src="img/logo.PNG">
 </a>
 
-This is a web application that provides an interpreter for interpreter and translating between the lambda calculus system and Turing machines. The application can translate in both directions, converting from the weak lambda calculus to the multi-tape Turing machine, or from the single-tape Turing machine to the weak lambda calculus. The methods used for these translations are based on those outlined by Dal Lago and Martini in their paper ["The Weak Lambda Calculus as a Reasonable Machine"](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044).
+This is a web application that provides an interpreter for simulating and translating between the lambda calculus system and Turing machines. The application can translate in both directions, converting from the weak lambda calculus to the multi-tape Turing machine, or from the single-tape Turing machine to the weak lambda calculus. 
+
+The methods used for these translations are based on those outlined by Dal Lago and Martini in their paper ["The Weak Lambda Calculus as a Reasonable Machine"](https://dl.acm.org/doi/10.1016/j.tcs.2008.01.044).
 
 - Built in **HTML/CSS/JavaScript**
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**

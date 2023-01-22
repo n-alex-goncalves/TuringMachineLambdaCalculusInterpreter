@@ -16,7 +16,7 @@ Website: https://n-alex-goncalves.github.io/Turing-Machine-Lambda-Calculus-Conve
 
 The lambda calculus interpreter uses an applicative-order evaluation strategy to perform beta reduction. The interpreter is able to simplify complex lambda calculus expressions. It can also highlight the parameters and arguments of an expression, and it can simulate both SKI combinators and boolean logic operations.
 
-The Turing machine (TM) interpter works using a JSON-based terminal as outlined by Chad Palmer in his article ["A Complete Web Page: Building a Turing Machine in JavaScript"](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4). The TM interperter can visualise the run of a Turing machine by simulating the movement of the machine head on a tape.
+The Turing machine (TM) interpreter works using a JSON-based terminal as outlined by Chad Palmer in his article ["A Complete Web Page: Building a Turing Machine in JavaScript"](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4). The TM interpreter can visualise the run of a Turing machine by simulating the movement of the machine head on a tape.
 
 The multi-tape TM interpreter is used for simulating a lambda calculus term in a Turing machine. The format of the lambda term that is simplified by the multi-tape interpreter is similar to the format of De Brujin indices.
 

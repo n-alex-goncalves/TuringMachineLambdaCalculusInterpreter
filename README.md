@@ -12,54 +12,38 @@ The methods used for these translations are based on those outlined by Dal Lago 
 - User Interface built with **Bootstrap**, **JQuery**, **JQuery Terminal** and **FullPages**
 - Tested using **Jest** and **Node.JS**
 
-## GENERAL DESCRIPTION
+## Instructions for Simulating Turing Machine (TM) In the Lambda Calculus
 
-The lambda calculus interpreter uses an applicative-order evaluation strategy to perform beta reduction. The interpreter is able to simplify complex lambda calculus expressions. It can also highlight the parameters and arguments of an expression, and it can simulate both SKI combinators and boolean logic operations.
-
-The Turing machine (TM) interpreter works using a JSON-based terminal as outlined by Chad Palmer in his article ["A Complete Web Page: Building a Turing Machine in JavaScript"](https://medium.com/swlh/a-complete-web-page-building-a-turing-machine-in-javascript-d6c32d3708c4). The TM interpreter can visualise the run of a Turing machine by simulating the movement of the machine head on a tape.
-
-The multi-tape TM interpreter is used for simulating a lambda calculus term in a Turing machine. The format of the lambda term that is simplified by the multi-tape interpreter is similar to the format of De Brujin indices.
-
-## INSTRUCTIONS FOR SIMULATING TURING MACHINE (TM) IN THE LAMBDA CALCULUS
-
-1. In the `Single-Tape Turing Machine Interpreter`, run a TM using either an example in the drop-down list or create a TM of your own
-
+1. In the `Single-Tape TM Interpreter`, run a TM using either an example in the drop-down list or create a TM of your own
 2. In the `Lambda Calculus Interpreter`, enter 'T' to denote the beginning of the TM as a lambda term
-
-3. In the `Lambda Calculus Interpreter`, enter to the right of 'T' the tape you want to run:
-
-        T101
-
+3. In the `Lambda Calculus Interpreter`, enter to the right of 'T' the tape you want to run (e.g., T1011 to run the tape 1011)
 4. Run the `Lambda Calculus Interpreter`
 
-## INSTRUCTIONS FOR SIMULATING LAMBDA CALCULUS IN THE MULTI-TAPE TURING MACHINE (TM)
+## Instructions for Simulating Lambda Calculus in the Multi-Tape Turing Machine (TM)
 
-1. In the `Lambda Calculus Interpreter`, enter the lambda calculus term being converted.
-
-2. In the `Multi-Tape Turing Machine Interpreter`, the lambda calculus term previously entered should now be converted into its Dal Lago and Martini notation
-
-3. Run the `Multi-Tape Turing Machine Interpreter`
-
+1. In the `Lambda Calculus Interpreter`, enter the lambda calculus term being converted
+2. In the `Multi-Tape TM Interpreter`, the lambda calculus term entered in the `Lambda Calculus Interpreter`should now be converted into its Dal Lago and Martini notation
+3. Run the `Multi-Tape TM Interpreter`
 4. The tape of the interpreter at the halting state will be the weak head normal form of the lambda calculus term in Dal Lago and Martini notation
 
-## INTERPRETER SHOWCASE
+## Interpreter Showcase
 
-### LAMBDA CALCULUS INTERPRETER
+### Lambda Calculus Interpreter
 
 ![](img/lambdaGif.gif)
  
-### TURING MACHINE (TM) INTERPRETER
+### Turing Machine (TM) Interpreter
 
 <img src="img/turingGif.gif" width="740" height="450">
 
-## FILES
+## Files
 
 - `lambda_calculus_interpreter.js`: The lambda calculus system and the interpreter for running and reducing the lambda calculus terms
 - `single_tape_TM_interpreter.js`: The TM and its interpreter for running the TM
 - `multi_tape_TM_interpreter.js`: The multi-tape interpreter used to simulatie the lambda calculus in the multi-tape TM interpreter
 - `simulation_TM_to_lambda_calculus.js`: The functions necessary to convert the single-tape TM into a lambda calculus term 
 
-## DEPENDENCIES & REFERENCES
+## Dependencies & References
 
 Thanks go to the following authors/resources for their help and guidance:
 

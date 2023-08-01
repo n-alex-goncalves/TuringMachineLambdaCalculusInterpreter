@@ -1,4 +1,4 @@
-<a href = "https://n-alex-goncalves.github.io/Turing-Machine-Lambda-Calculus-Intepreter/">
+<a href = "https://n-alex-goncalves.github.io/TuringMachineLambdaCalculusIntepreter/">
 <img src="img/logo.PNG">
 </a>
 

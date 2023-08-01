@@ -1,8 +1,8 @@
-<a href = "https://n-alex-goncalves.github.io/TuringMachineLambdaCalculusIntepreter/">
+<a href = "https://n-alex-goncalves.github.io/TuringMachineLambdaCalculusInterpreter/">
 <img src="img/logo.PNG">
 </a>
 
-Website: https://n-alex-goncalves.github.io/TuringMachineLambdaCalculusIntepreter/
+Website: https://n-alex-goncalves.github.io/TuringMachineLambdaCalculusInterpreter/
 
 This is a web application that provides an interpreter for simulating and translating between the lambda calculus system and Turing machines. The application can translate in both directions, converting from the weak lambda calculus to the multi-tape Turing machine, or from the single-tape Turing machine to the weak lambda calculus. 
 
